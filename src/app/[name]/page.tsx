@@ -38,7 +38,7 @@ const HiteshSirPage = () => {
   const handleSubmit = async ()=>{
     setLoading(true);
     try {
-      const res = await axios.post(`http://localhost:3000/api/gemini`, {
+      const res = await axios.post(`https://persona-ai-lac.vercel.app/api/gemini`, {
         historyChat: allChats,
         recentMessage: text,
         teacherDetails: selectedPersona
