@@ -15,14 +15,14 @@ import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 
 
-const HiteshSirPage = () => {
+const EngineerPage = () => {
   const { name } = useParams();
   const [loading, setLoading] = useState(false);
-  const [selectedPersona, setSelectedPersona] = useState(name == "hitesh-chaudhary" ? personas[0]: personas[1]);
-  const [allChats, setAllChats] = useState<any[]>([{ User: "Hii", model: "Hey there how are you" }]);
+  const [selectedPersona, setSelectedPersona] = useState(name == "sam" ? personas[0]: personas[1]);
+  const [allChats, setAllChats] = useState<any[]>([{ User: "Hii", model: "Hey there how are you?" }]);
   const [text, setText] = useState("");
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const [image, setImage] = useState(name == "hitesh-chaudhary" ? "/hiteshsir.jpeg" : "/piysuh.jpeg")
+  const [image, setImage] = useState(name == "sam" ? "/sam.webp" : "/elon.jpg")
 
     useEffect(() => {
     if (scrollerRef.current) {
@@ -75,7 +75,7 @@ const HiteshSirPage = () => {
                   {name?.toString().charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-              Hi, I am {name?.toString().replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+              Hi, I am {name?.toString().replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}.
             </CardTitle>
           </CardHeader>
         </Card>
@@ -202,4 +202,4 @@ const HiteshSirPage = () => {
   )
 }
 
-export default HiteshSirPage
+export default EngineerPage
